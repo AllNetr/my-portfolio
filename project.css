@@ -1,0 +1,27 @@
+:root { font-family: Arial, sans-serif; color: #171717; background: #f4f1ea; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main { width: min(1120px, calc(100% - 48px)); margin: auto; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; font-size: .85rem; font-weight: 700; }
+header a { color: inherit; text-decoration: none; }
+.brand { font-size: 1.25rem; letter-spacing: -.05em; }
+.intro { min-height: 540px; padding: 85px 0 60px; }
+.intro > p, .kicker { margin: 0 0 20px; font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+h1 { margin: 0 0 32px; font-size: clamp(3.6rem, 9vw, 8rem); line-height: .82; letter-spacing: -.1em; }
+h1 i { font-family: Georgia, serif; font-weight: 400; }
+.cta { display: inline-block; padding: 15px 20px; background: #171717; color: #fff; border-radius: 5px; font-size: .85rem; font-weight: 700; text-decoration: none; }
+.banner { display: grid; place-items: center; min-height: 270px; padding: 25px; text-align: center; font-size: clamp(1.3rem, 4vw, 3.5rem); font-weight: 700; letter-spacing: -.05em; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 120px 0; }
+h2 { margin: 0; font-size: clamp(2rem, 4vw, 4rem); line-height: .95; letter-spacing: -.07em; }
+.split > p { margin: 0; color: #5d5a54; font-size: 1.1rem; line-height: 1.7; }
+.menu { padding: 65px 0 110px; }
+.menu div { display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #bbb5aa; font-size: 1.15rem; }
+.menu span { color: #6b665e; font-size: .8rem; }
+.visit { margin-bottom: 48px; padding: 70px 8%; color: #fff; }
+.visit p { margin: 0 0 14px; font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+.visit h2 { margin-bottom: 24px; }
+.visit span { font-size: .85rem; }
+.coffee .banner, .coffee .visit { background: #a34d2d; }.coffee .cta { background: #a34d2d; }
+.fitness .banner, .fitness .visit { background: #2d5e52; }.fitness .cta { background: #2d5e52; }
+.northstar .banner, .northstar .visit { background: #252035; }.northstar .cta { background: #252035; }
+@media (max-width: 650px) { header, main { width: min(100% - 32px, 1120px); }.intro { min-height: 460px; }.split { grid-template-columns: 1fr; gap: 28px; padding: 80px 0; }.visit { padding: 45px 8%; } }

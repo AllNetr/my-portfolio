@@ -1,0 +1,69 @@
+:root {
+  --ink: #1d1c1a;
+  --paper: #f6f3ed;
+  --accent: #d7ff4f;
+  --muted: #77736c;
+  font-family: "Manrope", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+a { color: inherit; }
+.header, .section, .contact, footer { width: min(1120px, calc(100% - 48px)); margin: auto; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; }
+.logo { font-size: 1.35rem; font-weight: 800; text-decoration: none; }
+.logo span { color: #f05a3d; }
+.nav { display: flex; gap: 26px; }
+.nav a { font-size: .9rem; font-weight: 700; text-decoration: none; }
+.nav a:hover { color: #f05a3d; }
+.section { padding: 104px 0; }
+.label { margin: 0 0 20px; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+.hero { min-height: 670px; display: grid; grid-template-columns: 1.45fr .75fr; align-items: center; gap: 80px; padding-top: 55px; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 760px; margin-bottom: 28px; font-size: clamp(2.9rem, 6vw, 5.8rem); line-height: .98; letter-spacing: -.07em; }
+h1 em, h2 em { font-family: Georgia, serif; font-weight: 400; }
+.hero-text { max-width: 500px; color: #5f5c56; line-height: 1.7; }
+.button { display: inline-flex; gap: 20px; align-items: center; margin-top: 16px; padding: 16px 20px; background: var(--ink); color: white; border-radius: 8px; font-size: .9rem; font-weight: 800; text-decoration: none; }
+.button:hover { background: #f05a3d; }
+.button span { font-size: 1.2rem; }
+.hero-card { min-height: 330px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between; background: #e7e0d4; border-radius: 18px; transform: rotate(3deg); }
+.hero-card p { font-size: 1.45rem; font-weight: 800; line-height: 1.15; }
+.avatar { width: 56px; height: 56px; display: grid; place-items: center; background: var(--accent); border-radius: 50%; font-size: 1.4rem; font-weight: 800; }
+.availability { font-size: .75rem; font-weight: 700; }
+.availability::first-letter { color: #43a047; }
+.about { border-top: 1px solid #d8d3ca; }
+.about-content { display: grid; grid-template-columns: 1.1fr .9fr; gap: 80px; }
+h2 { margin-bottom: 26px; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.06em; }
+.about-content p { color: #5f5c56; line-height: 1.75; }
+.skills { padding: 0; margin: 34px 0 0; list-style: none; }
+.skills li { display: inline-block; margin: 0 8px 10px 0; padding: 9px 13px; border: 1px solid #bbb5aa; border-radius: 99px; font-size: .8rem; font-weight: 700; }
+.projects { border-top: 1px solid #d8d3ca; }
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.project { display: block; text-decoration: none; transition: transform .2s ease; }
+.project:hover { transform: translateY(-6px); }
+.project-image { height: 285px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 12px; }
+.project-image span { font-size: .75rem; font-weight: 800; }
+.project-image b { font-size: 2rem; line-height: .9; letter-spacing: -.08em; }
+.project-one .project-image { background: #c26b45; color: #fff3df; }
+.project-two .project-image { background: #a8c8ca; color: #18313b; }
+.project-three .project-image { background: #262525; color: var(--accent); }
+.project-type { margin: 16px 0 7px; color: var(--muted); font-size: .72rem; font-weight: 700; }
+h3 { margin: 0; font-size: 1.05rem; }
+.contact { margin-top: 60px; margin-bottom: 60px; padding: 72px; background: var(--accent); border-radius: 18px; }
+.contact h2 { margin-bottom: 35px; }
+.email { font-size: clamp(1.15rem, 3vw, 2rem); font-weight: 800; text-decoration-thickness: 2px; text-underline-offset: 7px; }
+.email span { text-decoration: none; }
+footer { padding: 0 0 28px; color: var(--muted); font-size: .75rem; }
+@media (max-width: 720px) {
+  .header, .section, .contact, footer { width: min(100% - 32px, 1120px); }
+  .nav { gap: 14px; }
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 48px; padding-top: 50px; }
+  .section { padding: 70px 0; }
+  .hero-card { min-height: 230px; transform: none; }
+  .about-content, .project-grid { grid-template-columns: 1fr; gap: 28px; }
+  .project-image { height: 220px; }
+  .contact { margin: 20px auto 40px; padding: 40px 25px; }
+}
